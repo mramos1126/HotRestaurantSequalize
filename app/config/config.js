@@ -1,23 +1,23 @@
 var Sequelize = require("sequelize");
 
-// Lists out connection options
+//  several connecections can be used to linked up a mysql database, but I just used one.
 var source = {
   jawsDB: {
         port: 3306,
         host: 'q3vtafztappqbpzn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-        user: 't6l6jh8elwkrurv7',
-        password: 'ea9iqrachgaeugxs',
-        database: 'kff5oam7u4ow8gm0'
+        user: 'xam5cl7oq1iq4s4s',
+        password: 'ii4eqcwb83glaner',
+        database: 'x8unix98zw4xvl7y'
     }
 
 }
 
 
 
-// Selects a connection (can be changed quickly as needed)
+// this selects which source you want to link up
 var selectedSource = source.jawsDB;
 
-// Creates mySQL connection using Sequelize
+// this is where sequalize is used for mysql
 var sequelize = new Sequelize(selectedSource.database, selectedSource.user, selectedSource.password, {
   host: selectedSource.host,
   dialect: 'mysql',
